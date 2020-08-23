@@ -62,7 +62,7 @@ if __name__ == "__main__":
     print(f"*** This pull request was opened by {pr_user}")
     if pr_user != "dependabot":
         print("*** This pull request was opened by somebody who isn't dependabot")
-        sys.exit(78)
+        quit()
 
     print("*** This pull request is ready to be merged.")
     merge_url = pull_request["url"] + "/merge"
