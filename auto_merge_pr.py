@@ -4,6 +4,7 @@
 import json
 import os
 import requests
+import sys
 
 def create_session(github_token):
     sess = requests.Session()
@@ -62,7 +63,7 @@ if __name__ == "__main__":
     print(f"*** This pull request was opened by {pr_user}")
     if pr_user != "dependabot":
         print("*** This pull request was opened by somebody who isn't dependabot")
-        quit()
+        sys.exit(78)
 
     print("*** This pull request is ready to be merged.")
     merge_url = pull_request["url"] + "/merge"
