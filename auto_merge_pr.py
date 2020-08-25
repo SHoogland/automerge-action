@@ -61,8 +61,8 @@ if __name__ == "__main__":
 
     pr_user = pr_data["user"]["login"]
     print(f"*** This pull request was opened by {pr_user}")
-    if pr_user != "dependabot":
-        print("*** This pull request was opened by somebody who isn't dependabot")
+    if pr_user != "dependabot[bot]":
+        print("*** This pull request was opened by somebody who isn't dependabot[bot]")
         sys.exit(78)
 
     print("*** This pull request is ready to be merged.")
